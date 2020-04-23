@@ -1,6 +1,13 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="StarbuckMVC2:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/StarbuckMVC2_war_exploded</output-path>
+    <output-path>$PROJECT_DIR$/target/StarbuckMVC2</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>StarbuckMVC2</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -11,6 +18,9 @@
           <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
           <element id="library" level="project" name="Maven: taglibs:standard:1.1.2" />
         </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/StarbuckMVC2/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="StarbuckMVC2/web/Web" />
     </root>
