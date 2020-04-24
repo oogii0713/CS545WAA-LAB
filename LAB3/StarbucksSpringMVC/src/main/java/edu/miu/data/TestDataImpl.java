@@ -1,12 +1,12 @@
 package edu.miu.data;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 // Implements Singleton Pattern
-@Service
+@Repository
 public class TestDataImpl implements DataFacade {
 
     private static final Database data = new Database();
