@@ -20,7 +20,6 @@
                     <form:options items="${categories}" itemLabel="name" itemValue="id"/>
                 </form:select>
             </p>
-
             <p>
                 <label for="name"><spring:message code="product.name" text="Msg not found"/></label>
                 <form:input id="name" path="name" tabindex="1"/>
