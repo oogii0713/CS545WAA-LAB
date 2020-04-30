@@ -20,10 +20,11 @@
     </properties>
 
     <dependencies>
+        <!-- changed to the lastest version        -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>5.1.5.RELEASE</version>
+            <version>5.2.5.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>

@@ -17,6 +17,7 @@ public class ImageUploadControllerAdvice {
 
 		ModelAndView mav = new ModelAndView();
 
+
 		mav.addObject("invalidImage", exception.getFullMessage());
 		mav.setViewName("image-upload-error");
 
