@@ -78,7 +78,6 @@
                 <form:errors path="address.zipCode" cssStyle="color : red; "/>
             </div>
             </p>
-            </p>
             <div>
                 <label for="image"><spring:message code="addEmp.form.image.label"/></label>
                 <form:input path="image" id="image" type="file" class="form:input-large" />

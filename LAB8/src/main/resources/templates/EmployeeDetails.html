@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Save Employee</title>
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+<div id="global">
+    <div style="padding-right:50px">
+        <a href="?language=en">English</a> | <a href="?language=mn">MGL</a>
+    </div>
+    <section class="container">
+        <h4><span th:text="#{emp.details.head4.label}">The employee details have been saved.</span></h4>
+        <p>
+        <h5><span th:text="#{emp.details.head5.label}">Details:</span></h5>
+        <div class="row">
+            <div class="col-md-4">
+                <img alt="test" th:src="@{/images/${employee.id}.png}" style="width:200px"/>
+            </div>
+            <div class="col-md-8">
+                <p>
+                    <span th:text="#{emp.firstName.label}">First Name: </span><span th:text="${employee.firstName}"></span><br/>
+                    <span th:text="#{emp.lastName.label}">Last Name: </span><span th:text="${employee.lastName}"></span><br/>
+                    <span th:text="#{emp.birthday.label}">Date Of Birth: </span><span th:text="${employee.birthDate}"></span>
+                </p>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+</body>
+
+</html>
