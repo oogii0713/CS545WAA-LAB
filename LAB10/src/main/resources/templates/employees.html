@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Employees info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/main.css}" href="../css/main.css"/>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" th:href="@{/}" href="#">CS545 Lab10 : : : Spring Data and ORM </a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" th:href="@{/list}" href="#">Employees Info</a>
+                <a class="nav-item nav-link active" th:href="@{/add}" href="#">Add Employee</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="container pt-4">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Employee Number</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Salary Level</th>
+                <th>Date of Birth</th>
+                <th>Detail info</th>
+            </tr>
+            </thead>
+            <tr th:each="emp : ${employees}">
+                <td th:text="${emp.employeeNumber}"></td>
+                <td th:text="${emp.firstName}"></td>
+                <td th:text="${emp.lastName}"></td>
+                <td th:text="${emp.salaryLevel}"></td>
+                <td th:text="${emp.birthDate}"></td>
+                <td><a th:href="@{/employee(id=${emp.employeeNumber})}">Details</a></td>
+            </tr>
+        </table>
+    </div>
+</main>
+<footer class="footer">
+    <div id="footer-content">
+        <span class="text-muted">Otgonbayar M : : : CS545-WAA</span>
+        <span class="text-muted" style="float:right;">&copy; May 2020</span>
+    </div>
+</footer>
+</body>
+</html>

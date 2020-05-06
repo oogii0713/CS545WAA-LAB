@@ -8,6 +8,8 @@ public class Address {
 
 	@NotEmpty(message = "{String.empty}")
 	private String street;
+
+	@NotEmpty
 	private String city;
 
 	@Size(min = 2, max = 2, message = "{Size.state}")
