@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class LoginController {
 
    @GetMapping(value = "/login")
-    public String loginPage(@RequestParam(value = "error", required = false) String error,
-                            @RequestParam(value = "logout", required = false) String logout,
-                            Model model) {
+    public String loginPage(@RequestParam(value = "error", required = false) String error, @RequestParam(value = "logout", required = false) String logout, Model model) {
         String errorMessge = null;
         if (error != null) {
             errorMessge = "Username or Password is incorrect !!";
@@ -22,7 +20,6 @@ public class LoginController {
         model.addAttribute("errorMessge", errorMessge);
         return "login";
     }
-
 
     @GetMapping("/denied")
     public String accessDenied(){

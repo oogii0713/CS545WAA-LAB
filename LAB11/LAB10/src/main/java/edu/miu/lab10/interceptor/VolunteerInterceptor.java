@@ -17,6 +17,8 @@ public class VolunteerInterceptor extends HandlerInterceptorAdapter {
 		if (principal != null) {
 			if (request.isUserInRole("ROLE_ADMIN"))
 				userMessage = "Welcome Admin, you can add a new employee.";
+			else
+				userMessage = "Welcome User";
 		}
 		request.setAttribute("userMessage", userMessage);
 	}
